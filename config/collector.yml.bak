@@ -1,0 +1,10 @@
+logging:
+  file: /home/work/jpaas_light_collector_master/log/collector.log
+mysql:
+  host: 10.36.58.11
+  username: jpaas
+  password: mhxzkhl
+  db_name: jpaas
+instance_remove_interval: 15
+dea_remove_interval: 60
+

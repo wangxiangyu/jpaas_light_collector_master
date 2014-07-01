@@ -1,0 +1,135 @@
+have_func: checking for mysql_ssl_set()... -------------------- yes
+
+"gcc -o conftest -I/home/work/jpaas_light_collector_master/env/ruby193/include/ruby-1.9.1/x86_64-linux -I/home/work/jpaas_light_collector_master/env/ruby193/include/ruby-1.9.1/ruby/backward -I/home/work/jpaas_light_collector_master/env/ruby193/include/ruby-1.9.1 -I.    -I/home/work/opbin/mysql/include/mysql -DUNIV_LINUX -DUNIV_LINUX  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/home/work/jpaas_light_collector_master/env/ruby193/lib -Wl,-R/home/work/jpaas_light_collector_master/env/ruby193/lib -L.  -rdynamic -Wl,-export-dynamic    -rdynamic -L/home/work/opbin/mysql/lib/mysql -lmysqlclient -lz -lcrypt -lnsl -lm  -Wl,-R -Wl,/home/work/jpaas_light_collector_master/env/ruby193/lib -L/home/work/jpaas_light_collector_master/env/ruby193/lib -lruby-static  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -o conftest -I/home/work/jpaas_light_collector_master/env/ruby193/include/ruby-1.9.1/x86_64-linux -I/home/work/jpaas_light_collector_master/env/ruby193/include/ruby-1.9.1/ruby/backward -I/home/work/jpaas_light_collector_master/env/ruby193/include/ruby-1.9.1 -I.    -I/home/work/opbin/mysql/include/mysql -DUNIV_LINUX -DUNIV_LINUX  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/home/work/jpaas_light_collector_master/env/ruby193/lib -Wl,-R/home/work/jpaas_light_collector_master/env/ruby193/lib -L.  -rdynamic -Wl,-export-dynamic    -rdynamic -L/home/work/opbin/mysql/lib/mysql -lmysqlclient -lz -lcrypt -lnsl -lm  -Wl,-R -Wl,/home/work/jpaas_light_collector_master/env/ruby193/lib -L/home/work/jpaas_light_collector_master/env/ruby193/lib -lruby-static -rdynamic -L/home/work/opbin/mysql/lib/mysql -lmysqlclient -lz -lcrypt -lnsl -lm  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:4: error: ‘mysql_ssl_set’ undeclared (first use in this function)
+conftest.c:4: error: (Each undeclared identifier is reported only once
+conftest.c:4: error: for each function it appears in.)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))mysql_ssl_set; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+"gcc -o conftest -I/home/work/jpaas_light_collector_master/env/ruby193/include/ruby-1.9.1/x86_64-linux -I/home/work/jpaas_light_collector_master/env/ruby193/include/ruby-1.9.1/ruby/backward -I/home/work/jpaas_light_collector_master/env/ruby193/include/ruby-1.9.1 -I.    -I/home/work/opbin/mysql/include/mysql -DUNIV_LINUX -DUNIV_LINUX  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/home/work/jpaas_light_collector_master/env/ruby193/lib -Wl,-R/home/work/jpaas_light_collector_master/env/ruby193/lib -L.  -rdynamic -Wl,-export-dynamic    -rdynamic -L/home/work/opbin/mysql/lib/mysql -lmysqlclient -lz -lcrypt -lnsl -lm  -Wl,-R -Wl,/home/work/jpaas_light_collector_master/env/ruby193/lib -L/home/work/jpaas_light_collector_master/env/ruby193/lib -lruby-static -rdynamic -L/home/work/opbin/mysql/lib/mysql -lmysqlclient -lz -lcrypt -lnsl -lm  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:4: warning: implicit declaration of function ‘mysql_ssl_set’
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { mysql_ssl_set(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+--------------------
+
+have_func: checking for rb_str_set_len()... -------------------- yes
+
+"gcc -o conftest -I/home/work/jpaas_light_collector_master/env/ruby193/include/ruby-1.9.1/x86_64-linux -I/home/work/jpaas_light_collector_master/env/ruby193/include/ruby-1.9.1/ruby/backward -I/home/work/jpaas_light_collector_master/env/ruby193/include/ruby-1.9.1 -I.    -I/home/work/opbin/mysql/include/mysql -DUNIV_LINUX -DUNIV_LINUX  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/home/work/jpaas_light_collector_master/env/ruby193/lib -Wl,-R/home/work/jpaas_light_collector_master/env/ruby193/lib -L.  -rdynamic -Wl,-export-dynamic    -rdynamic -L/home/work/opbin/mysql/lib/mysql -lmysqlclient -lz -lcrypt -lnsl -lm  -Wl,-R -Wl,/home/work/jpaas_light_collector_master/env/ruby193/lib -L/home/work/jpaas_light_collector_master/env/ruby193/lib -lruby-static -rdynamic -L/home/work/opbin/mysql/lib/mysql -lmysqlclient -lz -lcrypt -lnsl -lm  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))rb_str_set_len; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+--------------------
+
+have_func: checking for rb_thread_start_timer()... -------------------- no
+
+"gcc -o conftest -I/home/work/jpaas_light_collector_master/env/ruby193/include/ruby-1.9.1/x86_64-linux -I/home/work/jpaas_light_collector_master/env/ruby193/include/ruby-1.9.1/ruby/backward -I/home/work/jpaas_light_collector_master/env/ruby193/include/ruby-1.9.1 -I.    -I/home/work/opbin/mysql/include/mysql -DUNIV_LINUX -DUNIV_LINUX  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/home/work/jpaas_light_collector_master/env/ruby193/lib -Wl,-R/home/work/jpaas_light_collector_master/env/ruby193/lib -L.  -rdynamic -Wl,-export-dynamic    -rdynamic -L/home/work/opbin/mysql/lib/mysql -lmysqlclient -lz -lcrypt -lnsl -lm  -Wl,-R -Wl,/home/work/jpaas_light_collector_master/env/ruby193/lib -L/home/work/jpaas_light_collector_master/env/ruby193/lib -lruby-static -rdynamic -L/home/work/opbin/mysql/lib/mysql -lmysqlclient -lz -lcrypt -lnsl -lm  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:4: error: ‘rb_thread_start_timer’ undeclared (first use in this function)
+conftest.c:4: error: (Each undeclared identifier is reported only once
+conftest.c:4: error: for each function it appears in.)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))rb_thread_start_timer; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+"gcc -o conftest -I/home/work/jpaas_light_collector_master/env/ruby193/include/ruby-1.9.1/x86_64-linux -I/home/work/jpaas_light_collector_master/env/ruby193/include/ruby-1.9.1/ruby/backward -I/home/work/jpaas_light_collector_master/env/ruby193/include/ruby-1.9.1 -I.    -I/home/work/opbin/mysql/include/mysql -DUNIV_LINUX -DUNIV_LINUX  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/home/work/jpaas_light_collector_master/env/ruby193/lib -Wl,-R/home/work/jpaas_light_collector_master/env/ruby193/lib -L.  -rdynamic -Wl,-export-dynamic    -rdynamic -L/home/work/opbin/mysql/lib/mysql -lmysqlclient -lz -lcrypt -lnsl -lm  -Wl,-R -Wl,/home/work/jpaas_light_collector_master/env/ruby193/lib -L/home/work/jpaas_light_collector_master/env/ruby193/lib -lruby-static -rdynamic -L/home/work/opbin/mysql/lib/mysql -lmysqlclient -lz -lcrypt -lnsl -lm  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:4: warning: implicit declaration of function ‘rb_thread_start_timer’
+/tmp/ccydldBF.o: In function `t':
+/home/work/jpaas_light_collector_master/env/ruby193/lib/ruby/gems/1.9.1/gems/mysql-2.9.1/ext/mysql_api/conftest.c:4: undefined reference to `rb_thread_start_timer'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { rb_thread_start_timer(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+--------------------
+
+have_header: checking for mysql.h... -------------------- yes
+
+"gcc -E -I/home/work/jpaas_light_collector_master/env/ruby193/include/ruby-1.9.1/x86_64-linux -I/home/work/jpaas_light_collector_master/env/ruby193/include/ruby-1.9.1/ruby/backward -I/home/work/jpaas_light_collector_master/env/ruby193/include/ruby-1.9.1 -I.    -I/home/work/opbin/mysql/include/mysql -DUNIV_LINUX -DUNIV_LINUX  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+/* end */
+
+--------------------
+

@@ -1,0 +1,11 @@
+logging:
+  file: /home/work/jpaas_light_collector_master/log/collector.log
+mysql:
+  host: 10.50.14.217
+  username: jpaas_monitor_w
+  password: U60edW3M4de28bIs
+  db_name: jpaas_monitor
+  port: 6064
+instance_remove_interval: 15
+dea_remove_interval: 60
+
