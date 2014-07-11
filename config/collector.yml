@@ -6,6 +6,7 @@ mysql:
   password: U60edW3M4de28bIs
   db_name: jpaas_monitor
   port: 6064
-instance_remove_interval: 15
+change_instance_to_stop_interval: 20
+remove_dead_instance__interval: 15
 dea_remove_interval: 60
 
