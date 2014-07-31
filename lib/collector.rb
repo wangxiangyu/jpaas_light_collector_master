@@ -34,7 +34,7 @@ module Collector
             begin
                 EM::PeriodicTimer.new(config["change_instance_to_stop_interval"]) do
                     time_change_instance_to_stop=Time.now.to_i-config["change_instance_to_stop_interval"]
-                    InstanceStatus.where("time < #{time_change_instance_to_stop}").update_all({:state=>"STOPPED"})
+                    InstanceStatus.where("time < #{time_change_instance_to_stop} AND state='RUNNING'").update_all({:state=>"STOPPED"})
                 end
             rescue => e
                 logger.error("Error in remove dead instance:#{e.message} #{e.backtrace}")
